@@ -17,6 +17,7 @@
 <?php
 include_once("Koneksi.php");
 
+// Membaca Data
 function readData($nama_tabel)
 {
     require "Koneksi.php";
@@ -213,6 +214,7 @@ function deletePeminjaman($id_peminjaman)
     }
 }
 
+// Mengambil Data
 function getMember($conn)
 {
     $query = $conn->prepare("SELECT * from member");
@@ -221,7 +223,6 @@ function getMember($conn)
     return $hasil;
 }
 
-// MENGAMBIL DATA BUKU
 function getBuku($conn)
 {
     $query = $conn->prepare("SELECT * from buku");
@@ -230,7 +231,6 @@ function getBuku($conn)
     return $hasil;
 }
 
-// MEMGAMBIL DATA PEMINJAMAN
 function getPeminjaman($conn)
 {
     $query = $conn->prepare("SELECT * from peminjaman");
